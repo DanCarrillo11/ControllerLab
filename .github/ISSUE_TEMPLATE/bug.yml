@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible Controller Lab issue
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Controller Lab version
+    validations:
+      required: true
+  - type: input
+    id: controller
+    attributes:
+      label: Controller model and USB/Bluetooth/adapter connection
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Exact error and reviewed diagnostics
+      description: Review device names and identifiers before sharing. Include output type if using emulation.

@@ -1,0 +1,36 @@
+name: Windows candidate checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-and-package:
+    runs-on: windows-latest
+    env:
+      VGAMEPAD_SKIP_VIGEMBUS_INSTALL: 'true'
+      QT_QPA_PLATFORM: offscreen
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+          cache: pip
+      - run: python -m pip install -r requirements-build.txt
+      - run: python tools/run_checks.py outputs/test-summary.json
+      - run: python tools/collect_notices.py
+      - run: python -m PyInstaller --noconfirm ControllerLab.spec
+      - run: python tools/verify_packaged.py dist/ControllerLab/ControllerLab.exe --evidence-dir outputs/frozen --report-json outputs/verification.json
+      - run: python tools/package_release.py --test-summary outputs/test-summary.json --verification outputs/verification.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ControllerLab-Windows-candidate
+          path: |
+            outputs/ControllerLab-*-Portable.zip*
+            outputs/test-summary.json
+            outputs/verification.json
+          if-no-files-found: error

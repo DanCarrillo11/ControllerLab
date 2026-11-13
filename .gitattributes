@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.spec text eol=lf
+*.svg text eol=lf
+third_party/** -whitespace
+assets/overlays/upstream/** -text -whitespace
+assets/overlays/licenses/** -text -whitespace
+*.png binary
+*.ico binary
+assets/fonts/*.ttf -text
+# Keep upstream OFL files byte-identical to the manifest, including their spacing.
+assets/fonts/*-OFL.txt -text whitespace=-trailing-space
+assets/fonts/sources.json text eol=lf

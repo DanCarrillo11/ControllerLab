@@ -1,0 +1,253 @@
+{
+  "dualsense": {
+    "parts": {
+      "a": "cross",
+      "b": "circle",
+      "x": "rect",
+      "y": "triangle",
+      "back": "create",
+      "start": "options",
+      "guide": "ps",
+      "misc1": "mute",
+      "touchpad": "touchpad",
+      "dpup": "dpad-up",
+      "dpdown": "dpad-down",
+      "dpleft": "dpad-right",
+      "dpright": "dpad-left",
+      "leftshoulder": "l1",
+      "rightshoulder": "r1",
+      "lefttrigger": "l2",
+      "righttrigger": "r2"
+    },
+    "sticks": {
+      "left": "l3",
+      "right": "r3"
+    },
+    "glyphs": {
+      "a": "lab-auto-0",
+      "x": "lab-auto-1",
+      "y": "lab-auto-2",
+      "b": "lab-auto-3"
+    },
+    "file": "dualsense.svg",
+    "upstream_sha256": "0a9b9ed4bb7c2cbde9b72ded72dfb20bb1de238a676872b3095ffd6826b799bd",
+    "sha256": "92de282ac73fd22a741a17c1f70f4b4bb75f99dc3ec224b5bb3d746d156682a0",
+    "viewbox": [
+      0.0,
+      0.0,
+      1117.0,
+      892.0
+    ]
+  },
+  "playstation": {
+    "parts": {
+      "a": "Active_Cross",
+      "b": "Active_Circle",
+      "x": "Active_Square",
+      "y": "Active_Triangle",
+      "back": "Active_Share",
+      "start": "Active_Options",
+      "guide": "Active_PS",
+      "touchpad": "Active_TouchPad",
+      "dpup": "Active_DPadTop",
+      "dpdown": "Active_DPadBottom",
+      "dpleft": "Active_DPadLeft",
+      "dpright": "Active_DPadRight",
+      "leftshoulder": "Active_L1",
+      "rightshoulder": "Active_R1",
+      "lefttrigger": "Active_LT",
+      "righttrigger": "Active_RT"
+    },
+    "sticks": {
+      "left": "Active_LS",
+      "right": "Active_RS"
+    },
+    "glyphs": {
+      "a": "lab-glyph-cross",
+      "b": "lab-glyph-circle",
+      "x": "lab-glyph-square",
+      "y": "lab-glyph-triangle"
+    },
+    "file": "playstation.svg",
+    "upstream_sha256": "6b5d1ca6beeb8c42be38fb602cab6f5abed1d563bf760f1377bacf0804297d89",
+    "sha256": "39af4033b433570a9ee972bc7ba1020f50009f8d60d5ceddf97a73aeacba68eb",
+    "viewbox": [
+      0.0,
+      0.0,
+      1313.0,
+      1037.0
+    ]
+  },
+  "xbox": {
+    "parts": {
+      "a": "Button_A",
+      "b": "Button_B",
+      "x": "Button_X",
+      "y": "Button_Y",
+      "back": "Button_Select",
+      "start": "Button_Start",
+      "guide": "Button_Home",
+      "lefttrigger": "Button_L",
+      "righttrigger": "Button_R",
+      "leftshoulder": "Button_ZL",
+      "rightshoulder": "Button_ZR",
+      "dpup": "Dpad_Up",
+      "dpdown": "Dpad_Down",
+      "dpleft": "Dpad_Left",
+      "dpright": "Dpad_Right"
+    },
+    "sticks": {
+      "left": "Analog_Stick",
+      "right": "Analog_C_Stick"
+    },
+    "file": "xbox.svg",
+    "upstream_sha256": "a672f7d27ceca325a7f6aa75c9243d982dcfc82d1c2128d53f5e06d9b87c91fe",
+    "sha256": "963c952a7ec4850b893a02434d47cc8aaed1d52ad7a332535a6612f0721b870e",
+    "viewbox": [
+      -10.0000298803447,
+      190.0,
+      2010.9992952871721,
+      1483.33
+    ]
+  },
+  "switch": {
+    "parts": {
+      "a": "g10417",
+      "b": "g10422",
+      "x": "g10432",
+      "y": "g10427",
+      "back": "g1445",
+      "start": "g1440",
+      "guide": "g1458",
+      "misc1": "g1451",
+      "leftshoulder": "lab-lb",
+      "rightshoulder": "lab-rb",
+      "lefttrigger": "lab-lt",
+      "righttrigger": "lab-rt",
+      "dpup": "g1435",
+      "dpdown": "g1435",
+      "dpleft": "g1435",
+      "dpright": "g1435"
+    },
+    "sticks": {
+      "left": "g2489",
+      "right": "g2495"
+    },
+    "split_dpad": true,
+    "file": "switch.svg",
+    "upstream_sha256": "45a21e7f3e18790d7e0993b6b3eb43d8de89b6b74efd06c91f38310c84f1b960",
+    "sha256": "bc9193ed3b8a41578ceed0b936561bccc168e84bb0ccc444a035daad1b81447f",
+    "viewbox": [
+      0.0,
+      0.0,
+      419.12717,
+      304.54603
+    ]
+  },
+  "generic": {
+    "parts": {
+      "a": "Button_A",
+      "b": "Button_B",
+      "x": "Button_X",
+      "y": "Button_Y",
+      "back": "Button_Select",
+      "start": "Button_Start",
+      "guide": "lab-generic-home",
+      "lefttrigger": "Button_L",
+      "righttrigger": "Button_R",
+      "leftshoulder": "Button_ZL",
+      "rightshoulder": "Button_ZR",
+      "dpup": "Dpad_Up",
+      "dpdown": "Dpad_Down",
+      "dpleft": "Dpad_Left",
+      "dpright": "Dpad_Right"
+    },
+    "sticks": {
+      "left": "Analog_Stick",
+      "right": "Analog_C_Stick"
+    },
+    "file": "generic.svg",
+    "upstream_sha256": "a672f7d27ceca325a7f6aa75c9243d982dcfc82d1c2128d53f5e06d9b87c91fe",
+    "sha256": "9ecd6ea0af1b53da8149e813e4d9c6a1b93290decaa2774052e562b1179de79c",
+    "viewbox": [
+      -10.0000298803447,
+      190.0,
+      2010.9992952871721,
+      1483.33
+    ]
+  },
+  "gamecube": {
+    "parts": {
+      "a": "Button_A",
+      "b": "Button_B",
+      "x": "Button_X",
+      "y": "Button_Y",
+      "start": "Button_Start",
+      "rightshoulder": "Button_Z",
+      "leftshoulder": "Button_L",
+      "lefttrigger": "Button_L",
+      "righttrigger": "Button_R",
+      "dpup": "Dpad_Up",
+      "dpdown": "Dpad_Down",
+      "dpleft": "Dpad_Left",
+      "dpright": "Dpad_Right"
+    },
+    "sticks": {
+      "left": "Analog_Stick",
+      "right": "Analog_C_Stick"
+    },
+    "visible": {
+      "lefttrigger": [
+        0,
+        0,
+        1,
+        0.25
+      ],
+      "righttrigger": [
+        0,
+        0,
+        1,
+        0.25
+      ],
+      "leftshoulder": [
+        0,
+        0,
+        1,
+        0.25
+      ]
+    },
+    "file": "gamecube.svg",
+    "upstream_sha256": "a8096496cec15c89e4931738780ba9308409ac4f68c808f9a9d0228be59b72f9",
+    "sha256": "c4d43115b52bff5c7dceb711c85bc0721dbb7d23a7f24bd527450b39e06581e5",
+    "viewbox": [
+      0.0,
+      0.0,
+      3828.0,
+      2689.0
+    ]
+  },
+  "wii": {
+    "parts": {
+      "a": "path5097",
+      "back": "path5099",
+      "guide": "path5101",
+      "start": "path5103",
+      "x": "lab-one",
+      "y": "lab-two",
+      "dpup": "lab-up",
+      "dpdown": "lab-down",
+      "dpleft": "lab-left",
+      "dpright": "lab-right"
+    },
+    "sticks": {},
+    "file": "wii.svg",
+    "upstream_sha256": "62ad46f5a4c7475ce4af1df4c445dd8d1e655d2448ad4f727d0ed3e57485e273",
+    "sha256": "7d2e90db63924a26e02588d637bf8dcdfc19060907e38f18f19bde3179e3cae8",
+    "viewbox": [
+      -3.0,
+      -3.0,
+      130.01575,
+      537.49603
+    ]
+  }
+}
