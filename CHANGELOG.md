@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.0 RC12 — PlayStation controller icon
+
+- Use the supplied PlayStation controller photo with its cable and background
+  removed for the application icon and README.
+
 ## 0.9.0 RC11 — interface aligned with the companion applications
 
 - Use a full-width application header, an attached controller sidebar and blue
