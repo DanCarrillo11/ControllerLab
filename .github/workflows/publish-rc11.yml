@@ -1,0 +1,71 @@
+name: Publish Controller Lab RC11
+
+on:
+  push:
+    branches: [publish/release-rc11]
+    paths: [.github/workflows/publish-rc11.yml]
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency: controller-lab-rc11-publication
+
+jobs:
+  publish:
+    if: github.repository == 'DanCarrillo11/ControllerLab'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: DanCarrillo11/ControllerLab
+      SOURCE_COMMIT: 828f1c59e6bb4e40ce39e4825ef4b3fa40849b35
+      BUILD_RUN: '43517099358'
+      TAG: v0.9.0-rc.11
+      ZIP: ControllerLab-0.9.0-rc.11-Portable.zip
+    steps:
+      - name: Verify and publish the tested portable build
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh run view "$BUILD_RUN" --json headSha,conclusion,event,headBranch |
+            jq -e --arg sha "$SOURCE_COMMIT" '.headSha == $sha and .conclusion == "success" and .event == "push" and .headBranch == "main"' >/dev/null
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo 'The requested release already exists.' >&2
+            exit 1
+          fi
+          if [[ -n "$(gh api "repos/$GH_REPO/git/matching-refs/tags/$TAG" --jq '.[].ref')" ]]; then
+            echo 'The requested tag already exists.' >&2
+            exit 1
+          fi
+          gh run download "$BUILD_RUN" --name ControllerLab-Windows-candidate --dir release
+          cd release
+          jq -e '.passed and .tests == 144 and .failures == 0 and .errors == 0' test-summary.json >/dev/null
+          jq -e '.frozen_gui == "passed" and .input_backend == "passed" and .workspace_pages == 9' verification.json >/dev/null
+          tr -d '\r' < "$ZIP.sha256" | sha256sum --check --strict
+          unzip -tq "$ZIP"
+          unzip -p "$ZIP" "${ZIP%.zip}/BUILD_INFO.json" |
+            jq -e --arg sha "$SOURCE_COMMIT" '.source_commit == $sha and .version == "0.9.0-rc.11" and .channel == "release-candidate" and .tests.passed and .driver_installers_included == false' >/dev/null
+          cat > notes.md <<'NOTES'
+          Controller Lab is a portable Windows x64 app for testing gamepads, recording diagnostic sessions, and saving named remapping profiles. RC11 aligns its interface with UniversalSaveEditor and SteamAchievementManager.
+
+          ### Use the portable build
+
+          1. Download and extract the portable ZIP.
+          2. Run `ControllerLab.exe` from the extracted folder. Keep `_internal` beside it.
+          3. For virtual Xbox 360 or DualShock 4 output, follow the [emulation setup guide](https://github.com/DanCarrillo11/ControllerLab/blob/main/docs/EMULATION.md).
+
+          ### Validation
+
+          The Windows build passed 144 automated tests and packaged checks covering nine workspace pages, seven controller views and report export. Earlier candidates created and removed both neutral virtual outputs on the development PC. In-game input forwarding and vibration still need physical testing.
+
+          The ZIP's SHA-256 checksum is attached.
+          NOTES
+          gh release create "$TAG" "$ZIP" "$ZIP.sha256" --target "$SOURCE_COMMIT" --title 'Controller Lab 0.9.0 RC11' --prerelease --latest=false --draft --notes-file notes.md
+          for asset in "$ZIP" "$ZIP.sha256"; do
+            digest=$(sha256sum "$asset" | cut -d ' ' -f 1)
+            size=$(wc -c < "$asset")
+            gh release view "$TAG" --json assets,isDraft,isPrerelease |
+              jq -e --arg name "$asset" --argjson size "$size" --arg digest "sha256:$digest" '.isDraft and .isPrerelease and ((.assets | length) == 2) and any(.assets[]; .name == $name and .size == $size and .digest == $digest and .state == "uploaded")' >/dev/null
+          done
+          gh release edit "$TAG" --draft=false --prerelease --latest=false
