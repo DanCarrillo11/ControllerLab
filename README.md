@@ -1,12 +1,8 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/app.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/app-dark.png">
-    <img src="assets/app-dark.png" width="64" alt="Controller Lab arcade joystick icon">
-  </picture>
+  <img src="assets/app.png" width="64" alt="Controller Lab PlayStation controller icon">
   <h1>Controller Lab</h1>
   <p>A closer look at every input.</p>
-  <p><strong>Windows x64 · English interface · 0.9.0 RC11</strong></p>
+  <p><strong>Windows x64 · English interface · 0.9.0 RC12</strong></p>
 </div>
 
 Controller Lab is a desktop workspace for testing gamepads: see live buttons,
