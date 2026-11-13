@@ -1,0 +1,28 @@
+{
+  "version": "0.9.0-rc.1",
+  "drivers": {
+    "vigem": true,
+    "hidhide": true
+  },
+  "outputs": {
+    "x360": {
+      "status": "created_neutral_and_detached"
+    },
+    "ds4": {
+      "status": "created_neutral_and_detached"
+    }
+  },
+  "physical_inputs_forwarded": false,
+  "vibration_requested": false,
+  "ready": true,
+  "recorded_at_utc": "2026-11-01T04:11:32.324897+00:00",
+  "executable": "ControllerLab-0.9.0-rc.1-Portable/ControllerLab.exe",
+  "executable_sha256": "594a29df8b999f6606f980f2d49974578cd75554303ec412f7779f4debee8982",
+  "executable_source_commit": "4ee78559e63d3b8d5006a8101bffd6750db6d673",
+  "check_exit_code": 0,
+  "driver_file_version": "1.21.442.0",
+  "bus_device_status": "OK",
+  "bus_device_error_code": 0,
+  "game_input_verified": false,
+  "vibration_forwarding_verified": false
+}

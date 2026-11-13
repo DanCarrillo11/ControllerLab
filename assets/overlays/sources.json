@@ -1,0 +1,105 @@
+{
+  "dualsense": {
+    "file": "dualsense.svg",
+    "upstream_file": "upstream/dualsense.svg",
+    "repository": "daidr/dualsense-tester",
+    "path": "design/dualsense.svg",
+    "revision": "5bc7ecee9f9bd09c7a562b5f0f2cbc0c35c710f9",
+    "license": "MIT",
+    "author": "Xuezhou Dai (daidr)",
+    "source_url": "https://github.com/daidr/dualsense-tester/blob/5bc7ecee9f9bd09c7a562b5f0f2cbc0c35c710f9/design/dualsense.svg",
+    "upstream_sha256": "0a9b9ed4bb7c2cbde9b72ded72dfb20bb1de238a676872b3095ffd6826b799bd",
+    "sha256": "92de282ac73fd22a741a17c1f70f4b4bb75f99dc3ec224b5bb3d746d156682a0",
+    "changes": "Recolored outline presentation; sanitized SVG metadata; mapped part IDs. See tools/prepare_overlays.py for all changes. PlayStation face glyphs are individually centered; triangles use optical centering. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  },
+  "playstation": {
+    "file": "playstation.svg",
+    "upstream_file": "upstream/playstation.svg",
+    "repository": "daidr/dualsense-tester",
+    "path": "design/dualshock.svg",
+    "revision": "5bc7ecee9f9bd09c7a562b5f0f2cbc0c35c710f9",
+    "license": "MIT",
+    "author": "Xuezhou Dai (daidr)",
+    "source_url": "https://github.com/daidr/dualsense-tester/blob/5bc7ecee9f9bd09c7a562b5f0f2cbc0c35c710f9/design/dualshock.svg",
+    "upstream_sha256": "6b5d1ca6beeb8c42be38fb602cab6f5abed1d563bf760f1377bacf0804297d89",
+    "sha256": "39af4033b433570a9ee972bc7ba1020f50009f8d60d5ceddf97a73aeacba68eb",
+    "changes": "Recolored outline presentation; sanitized SVG metadata; mapped part IDs. See tools/prepare_overlays.py for all changes. PlayStation face glyphs are individually centered; triangles use optical centering. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  },
+  "xbox": {
+    "file": "xbox.svg",
+    "upstream_file": "upstream/xbox.svg",
+    "repository": "datkat21/ControllerOverlays",
+    "path": "styles/xbox/xbox_one_black.svg",
+    "revision": "20271b5ca4d7cb5b7d8e9a075d038506b16162d2",
+    "license": "GPL-3.0",
+    "author": "ControllerOverlays contributors",
+    "source_url": "https://github.com/datkat21/ControllerOverlays/blob/20271b5ca4d7cb5b7d8e9a075d038506b16162d2/styles/xbox/xbox_one_black.svg",
+    "upstream_sha256": "a672f7d27ceca325a7f6aa75c9243d982dcfc82d1c2128d53f5e06d9b87c91fe",
+    "sha256": "963c952a7ec4850b893a02434d47cc8aaed1d52ad7a332535a6612f0721b870e",
+    "changes": "Front-facing Xbox One vector artwork; cropped unused artboard margins without changing proportions; recolored and mapped individual controls. See tools/prepare_overlays.py. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  },
+  "switch": {
+    "file": "switch.svg",
+    "upstream_file": "upstream/switch.svg",
+    "repository": "AL2009man/Gamepad-Asset-Pack",
+    "path": "Controller Asset Pack/Nintendo Switch Controller Images/Switch Pro Controller/Default Theme/Theme SVG/Switch Pro Controller VSCView.svg",
+    "revision": "a6d1113b0b3b2438bbbcb08a33f9a25eb2391d7c",
+    "license": "MIT",
+    "author": "Al. Lopez (AL2009man)",
+    "source_url": "https://github.com/AL2009man/Gamepad-Asset-Pack/blob/a6d1113b0b3b2438bbbcb08a33f9a25eb2391d7c/Controller%20Asset%20Pack/Nintendo%20Switch%20Controller%20Images/Switch%20Pro%20Controller/Default%20Theme/Theme%20SVG/Switch%20Pro%20Controller%20VSCView.svg",
+    "upstream_sha256": "45a21e7f3e18790d7e0993b6b3eb43d8de89b6b74efd06c91f38310c84f1b960",
+    "sha256": "bc9193ed3b8a41578ceed0b936561bccc168e84bb0ccc444a035daad1b81447f",
+    "changes": "Recolored outline presentation; sanitized SVG metadata; mapped part IDs. See tools/prepare_overlays.py for all changes. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  },
+  "gamecube": {
+    "file": "gamecube.svg",
+    "upstream_file": "upstream/gamecube.svg",
+    "repository": "datkat21/ControllerOverlays",
+    "path": "styles/gcn/gamecube_indigo.svg",
+    "revision": "20271b5ca4d7cb5b7d8e9a075d038506b16162d2",
+    "license": "GPL-3.0",
+    "author": "ControllerOverlays contributors",
+    "source_url": "https://github.com/datkat21/ControllerOverlays/blob/20271b5ca4d7cb5b7d8e9a075d038506b16162d2/styles/gcn/gamecube_indigo.svg",
+    "upstream_sha256": "a8096496cec15c89e4931738780ba9308409ac4f68c808f9a9d0228be59b72f9",
+    "sha256": "c4d43115b52bff5c7dceb711c85bc0721dbb7d23a7f24bd527450b39e06581e5",
+    "changes": "Recolored outline presentation; sanitized SVG metadata; mapped part IDs. See tools/prepare_overlays.py for all changes. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Replaced the GCN placeholder with the two-line Nintendo GameCube wordmark. Removed redundant offset shadow contours so each retained face edge is inked once. Neutral surface fills match the charcoal companion interface.",
+    "additional_sources": [
+      {
+        "upstream_file": "upstream/gamecube-wordmark.svg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Nintendo_GameCube_Official_Logo.svg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Nintendo_GameCube_Official_Logo.svg",
+        "revision": "2022-05-18T17:08:00Z",
+        "author": "Nintendo; vector uploaded by JustDanPatrick",
+        "license": "PD-textlogo",
+        "sha256": "7fad739b58d0440e4a0c942a56c9b9248839b21b887e65eb16f5cfd45250a1a9",
+        "changes": "Lettering portion only; cube symbol omitted; uniformly scaled, centered and recolored to replace the GCN placeholder."
+      }
+    ]
+  },
+  "wii": {
+    "file": "wii.svg",
+    "upstream_file": "upstream/wii.svg",
+    "repository": "",
+    "path": "https://commons.wikimedia.org/wiki/File:Wiimote_1_Player_Icon.svg",
+    "revision": "2007-07-15",
+    "license": "CC-BY-SA-3.0",
+    "author": "Alexanderpas",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wiimote_1_Player_Icon.svg",
+    "upstream_sha256": "62ad46f5a4c7475ce4af1df4c445dd8d1e655d2448ad4f727d0ed3e57485e273",
+    "sha256": "7d2e90db63924a26e02588d637bf8dcdfc19060907e38f18f19bde3179e3cae8",
+    "changes": "Recolored outline presentation; sanitized SVG metadata; mapped part IDs. See tools/prepare_overlays.py for all changes. Added individual direction and 1/2 controls and labels to the community base icon. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  },
+  "generic": {
+    "file": "generic.svg",
+    "upstream_file": "upstream/xbox.svg",
+    "repository": "datkat21/ControllerOverlays",
+    "path": "styles/xbox/xbox_one_black.svg",
+    "revision": "20271b5ca4d7cb5b7d8e9a075d038506b16162d2",
+    "license": "GPL-3.0",
+    "author": "ControllerOverlays contributors",
+    "source_url": "https://github.com/datkat21/ControllerOverlays/blob/20271b5ca4d7cb5b7d8e9a075d038506b16162d2/styles/xbox/xbox_one_black.svg",
+    "upstream_sha256": "a672f7d27ceca325a7f6aa75c9243d982dcfc82d1c2128d53f5e06d9b87c91fe",
+    "sha256": "9ecd6ea0af1b53da8149e813e4d9c6a1b93290decaa2774052e562b1179de79c",
+    "changes": "Front-facing Xbox One vector artwork; cropped unused artboard margins without changing proportions; recolored and mapped individual controls. See tools/prepare_overlays.py. Standard layout with the brand mark removed. Screen-space line weights normalized with non-scaling strokes; thin filled DS4 details receive a matching outline. Neutral surface fills match the charcoal companion interface."
+  }
+}
